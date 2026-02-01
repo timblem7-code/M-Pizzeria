@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Pizzeria | Premium Italian Taste in Lahore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --light-blue: #E3F2FD;
+            --mid-blue: #2196F3;
+            --dark-blue: #0D47A1;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--light-blue) 0%, #ffffff 100%);
+        }
+        .text-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .text-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-link:hover {
+            color: var(--mid-blue);
+            transform: scale(1.05);
+        }
+        .pizza-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid var(--light-blue);
+            overflow: hidden;
+        }
+        .pizza-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--mid-blue);
+        }
+        .pizza-img-container {
+            height: 220px;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .pizza-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .pizza-card:hover .pizza-img-container img {
+            transform: scale(1.1);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        .btn-premium {
+            background: var(--dark-blue);
+            transition: all 0.3s ease;
+        }
+        .btn-premium:hover {
+            background: var(--mid-blue);
+            box-shadow: 0 10px 15px rgba(33, 150, 243, 0.3);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-900 tracking-tighter animate__animated animate__fadeInLeft">
+                M <span class="text-blue-500">PIZZERIA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+                <a href="#home" class="nav-link transition-all">Home</a>
+                <a href="#menu" class="nav-link transition-all">Menu</a>
+                <a href="#deals" class="nav-link transition-all">Deals</a>
+                <a href="#contact" class="nav-link transition-all">Contact</a>
+            </div>
+            <a href="tel:+923004805000" class="btn-premium text-white px-6 py-2 rounded-full font-semibold animate__animated animate__fadeInRight">
+                Order Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h1 class="text-5xl md:text-7xl font-bold text-blue-900 leading-tight text-animate">
+                    Experience <br>
+                    <span class="text-blue-500">Premium</span> Taste <br>
+                    In Every Slice.
+                </h1>
+                <p class="text-lg text-gray-600 max-w-md text-animate" style="transition-delay: 0.2s;">
+                    Lahore's finest pizzeria bringing you the authentic blend of spices and cheese. Freshly baked, just for you.
+                </p>
+                <div class="flex flex-wrap gap-4 text-animate" style="transition-delay: 0.4s;">
+                    <a href="#menu" class="btn-premium text-white px-8 py-4 rounded-xl font-bold text-lg inline-block">View Menu</a>
+                    <a href="https://www.facebook.com/MPizzeriaLhr/" target="_blank" class="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all inline-block">Explore Facebook</a>
+                </div>
+            </div>
+            <div class="relative animate__animated animate__zoomIn">
+                <div class="bg-blue-200 absolute w-72 h-72 rounded-full filter blur-3xl opacity-30 top-0 right-0"></div>
+                <div class="floating flex justify-center">
+                    <div class="w-80 h-80 bg-white rounded-full shadow-2xl flex items-center justify-center p-0 border-8 border-blue-50 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800" alt="Hero Pizza" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="absolute bottom-10 left-10 bg-white p-4 rounded-2xl shadow-xl animate__animated animate__bounceInUp" style="animation-delay: 1s;">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-green-100 p-2 rounded-full text-green-600">⭐</div>
+                        <div>
+                            <p class="font-bold text-gray-800">4.9 Rating</p>
+                            <p class="text-xs text-gray-500">From 1000+ Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4 text-animate">Our Best Sellers</h2>
+                <div class="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="pizza-card p-6 rounded-3xl bg-white text-animate">
+                    <div class="pizza-img-container mb-6 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600" alt="Chicken Fajita Pizza">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Chicken Fajita Pizza</h3>
+                    <p class="text-gray-500 text-sm mb-4">Fajita chicken chunks, capsicum, onion and lots of mozzarella.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-blue-600">Rs. 699</span>
+                        <button class="bg-blue-100 text-blue-600 p-3 rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pizza-card p-6 rounded-3xl bg-white text-animate" style="transition-delay: 0.2s;">
+                    <div class="pizza-img-container mb-6 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1573015613045-717082346761?auto=format&fit=crop&q=80&w=600" alt="Loaded Fries">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Loaded Fries</h3>
+                    <p class="text-gray-500 text-sm mb-4">Olives, Jalapenos, Chicken Tikka, BBQ Sauce & Garlic Mayo.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-blue-600">Rs. 600</span>
+                        <button class="bg-blue-100 text-blue-600 p-3 rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pizza-card p-6 rounded-3xl bg-white text-animate" style="transition-delay: 0.4s;">
+                    <div class="pizza-img-container mb-6 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=600" alt="Malai Boti Pizza">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Malai Boti Pizza</h3>
+                    <p class="text-gray-500 text-sm mb-4">Creamy marinated chicken chunks, onion & creamy sauce drizzle.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-blue-600">Rs. 1,999</span>
+                        <button class="bg-blue-100 text-blue-600 p-3 rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-blue-900 text-white overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-800 p-8 rounded-2xl text-center transform hover:scale-105 transition-all">
+                        <div class="text-4xl mb-4">🔥</div>
+                        <h4 class="font-bold">Freshly Baked</h4>
+                    </div>
+                    <div class="bg-blue-800 p-8 rounded-2xl text-center mt-8 transform hover:scale-105 transition-all">
+                        <div class="text-4xl mb-4">🚚</div>
+                        <h4 class="font-bold">Fast Delivery</h4>
+                    </div>
+                    <div class="bg-blue-800 p-8 rounded-2xl text-center transform hover:scale-105 transition-all">
+                        <div class="text-4xl mb-4">🧀</div>
+                        <h4 class="font-bold">Extra Cheese</h4>
+                    </div>
+                    <div class="bg-blue-800 p-8 rounded-2xl text-center mt-8 transform hover:scale-105 transition-all">
+                        <div class="text-4xl mb-4">💎</div>
+                        <h4 class="font-bold">Quality First</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold leading-tight">Why M Pizzeria is <br> <span class="text-blue-400">Lahore's Favorite?</span></h2>
+                <p class="text-blue-100 opacity-80">We don't just make pizza, we create memories. Using the finest ingredients and traditional recipes, we ensure every bite is a premium experience.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-3 italic">
+                        <span class="text-blue-400">✓</span>
+                        <span>Dough prepared fresh daily</span>
+                    </li>
+                    <li class="flex items-center space-x-3 italic">
+                        <span class="text-blue-400">✓</span>
+                        <span>Premium imported cheese</span>
+                    </li>
+                    <li class="flex items-center space-x-3 italic">
+                        <span class="text-blue-400">✓</span>
+                        <span>Special homemade sauces</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-white pt-20 pb-10">
+        <div class="container mx-auto px-6 border-b border-gray-100 pb-12 grid md:grid-cols-4 gap-12">
+            <div class="col-span-1">
+                <div class="text-2xl font-bold text-blue-900 mb-6">M <span class="text-blue-500">PIZZERIA</span></div>
+                <p class="text-gray-500 text-sm">Providing the best pizza experience in Lahore with premium quality and taste.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-900 mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-gray-600">
+                    <li><a href="#home" class="hover:text-blue-500 transition-all">Our Story</a></li>
+                    <li><a href="#menu" class="hover:text-blue-500 transition-all">Menu Details</a></li>
+                    <li><a href="#contact" class="hover:text-blue-500 transition-all">Location</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-900 mb-6">Contact Us</h4>
+                <ul class="space-y-4 text-gray-600">
+                    <li>Lahore, Pakistan</li>
+                    <li>+92 300 4805000</li>
+                    <li>info@mpizzeria.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-900 mb-6">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/MPizzeriaLhr/" target="_blank" class="bg-blue-100 text-blue-600 p-3 rounded-full hover:bg-blue-600 hover:text-white transition-all">FB</a>
+                    <a href="#" class="bg-blue-100 text-blue-600 p-3 rounded-full hover:bg-blue-600 hover:text-white transition-all">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-8 text-gray-400 text-xs">
+            © 2026 M Pizzeria Lahore. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('pizza-card')) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.text-animate, .pizza-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
